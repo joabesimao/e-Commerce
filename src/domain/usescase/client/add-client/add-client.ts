@@ -1,4 +1,3 @@
-import { Address } from "../../../models/address/address";
 import { Client } from "../../../models/client/client";
 
 export interface AddClientModel {
