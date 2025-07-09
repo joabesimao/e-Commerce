@@ -3,6 +3,7 @@ export interface AddressModel {
   neighborhood: string;
   numberHouse: number;
   reference: string;
+  cep: string;
   city: string;
 }
 
