@@ -5,7 +5,7 @@ export interface ProductModel {
   category: string;
 }
 
-export interface ProductModel {
+export interface Product {
   id: number;
   name: string;
   price: number;
