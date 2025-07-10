@@ -1,9 +1,12 @@
+import { AddressModel } from "../../../models/address/address";
 import { Client } from "../../../models/client/client";
+import { ContactsModel } from "../../../models/contacts/contact";
 
 export interface AddClientModel {
   name: string;
-  document: string;
   cpf: string;
+  address: AddressModel;
+  contact: ContactsModel;
 }
 
 export interface AddClient {
