@@ -94,7 +94,7 @@ describe("DbAddClient Usecase", () => {
     expect(client).toEqual(makeClient());
   });
 
-  test("Should throw if addClientRepository throws", async () => {
+  test("Should throw if AddClientRepository throws", async () => {
     const { sut, clientRepositoryStub } = makeSut();
     jest
       .spyOn(clientRepositoryStub, "add")
