@@ -14,4 +14,5 @@ export interface Address {
   numberHouse: number;
   reference: string;
   city: string;
+  cep: string;
 }

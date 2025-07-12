@@ -2,5 +2,5 @@ import { AddAddressModel } from "../../../../domain/usescase/address/add-address
 import { Address } from "../../../../domain/models/address/address";
 
 export interface AddAddressRepository {
-  add(client: AddAddressModel): Promise<Address>;
+  add(address: AddAddressModel): Promise<Address>;
 }
