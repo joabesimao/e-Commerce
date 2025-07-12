@@ -1,7 +1,4 @@
 import { DbDeleteClient } from "./db-delete-client";
-import { AddClientRepository } from "../../../protocols/db/client/add-client";
-import { Client } from "../../../../domain/models/client/client";
-import { AddClientModel } from "../../../../domain/usescase/client/add-client/add-client";
 import { DeleteClientRepository } from "../../../protocols/db/client/delete-client";
 
 interface SutTypes {

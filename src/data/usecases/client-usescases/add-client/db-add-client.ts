@@ -1,4 +1,4 @@
-import { Client, ClientModel } from "../../../../domain/models/client/client";
+import { Client } from "../../../../domain/models/client/client";
 import {
   AddClient,
   AddClientModel,

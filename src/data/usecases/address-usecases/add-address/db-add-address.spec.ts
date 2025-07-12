@@ -1,12 +1,6 @@
 import { DbAddAddress } from "./db-add-address";
-import { AddClientRepository } from "../../../protocols/db/client/add-client";
-import { Client } from "../../../../domain/models/client/client";
-import { AddClientModel } from "../../../../domain/usescase/client/add-client/add-client";
 import { AddAddressRepository } from "../../../protocols/db/address/add-address";
-import {
-  AddAddress,
-  AddAddressModel,
-} from "../../../../domain/usescase/address/add-address/add-address";
+import { AddAddressModel } from "../../../../domain/usescase/address/add-address/add-address";
 import { Address } from "../../../../domain/models/address/address";
 
 interface SutTypes {
