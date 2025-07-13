@@ -2,5 +2,5 @@ import { AddContactModel } from "../../../../domain/usescase/contact/add-contact
 import { Contacts } from "../../../../domain/models/contacts/contact";
 
 export interface AddContactRepository {
-  add(client: AddContactModel): Promise<Contacts>;
+  add(contact: AddContactModel): Promise<Contacts>;
 }
