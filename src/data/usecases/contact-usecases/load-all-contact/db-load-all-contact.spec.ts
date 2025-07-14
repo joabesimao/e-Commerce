@@ -1,20 +1,11 @@
 import { DbLoadAllContact } from "./db-load-all-contact";
-import {
-  Contacts,
-  ContactsModel,
-} from "../../../../domain/models/contacts/contact";
+import { Contacts } from "../../../../domain/models/contacts/contact";
 import { LoadAllContactRepository } from "../../../protocols/db/contact/load-all-contact";
 
 interface SutTypes {
   sut: DbLoadAllContact;
   loadAllContactRepositoryStub: LoadAllContactRepository;
 }
-
-const makeContact = (): ContactsModel => ({
-  phone: 88447744,
-  phoneSecundary: 44774488,
-  email: "any_email@email.com",
-});
 
 const makeContactList = (): Contacts[] => [
   {
@@ -58,15 +49,15 @@ const makeSut = (): SutTypes => {
 describe("DbLoadAllContact Usecase", () => {
   test("Should call LoadAllContactRepository with correct values", async () => {
     const { sut, loadAllContactRepositoryStub } = makeSut();
-    const addSpy = jest.spyOn(loadAllContactRepositoryStub, "loadAll");
+    const loadAllSpy = jest.spyOn(loadAllContactRepositoryStub, "loadAll");
     await sut.load();
-    expect(addSpy).toHaveBeenCalled();
+    expect(loadAllSpy).toHaveBeenCalled();
   });
 
   test("Should load all contact on success", async () => {
     const { sut } = makeSut();
-    const address = await sut.load();
-    expect(address).toEqual(makeContactList());
+    const contact = await sut.load();
+    expect(contact).toEqual(makeContactList());
   });
 
   test("Should throw if LoadAllContactRepository throws", async () => {

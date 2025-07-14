@@ -40,9 +40,9 @@ describe("DbLoadOneAddress Usecase", () => {
   const id = 6;
   test("Should call LoadOneAddressRepository with correct values", async () => {
     const { sut, loadOneAddressRepositoryStub } = makeSut();
-    const loadAllSpy = jest.spyOn(loadOneAddressRepositoryStub, "loadOne");
+    const loadOneSpy = jest.spyOn(loadOneAddressRepositoryStub, "loadOne");
     await sut.loadOne(id);
-    expect(loadAllSpy).toHaveBeenCalledWith(6);
+    expect(loadOneSpy).toHaveBeenCalledWith(6);
   });
 
   test("Should load one address on success", async () => {

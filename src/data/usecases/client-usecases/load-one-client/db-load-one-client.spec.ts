@@ -49,9 +49,9 @@ describe("DbLoadOneClient Usecase", () => {
 
   test("Should call LoadOneClientRepository with correct values", async () => {
     const { sut, loadOneClientRepositoryStub } = makeSut();
-    const addSpy = jest.spyOn(loadOneClientRepositoryStub, "loadOne");
+    const loadOneSpy = jest.spyOn(loadOneClientRepositoryStub, "loadOne");
     await sut.loadOne(id);
-    expect(addSpy).toHaveBeenCalledWith(8);
+    expect(loadOneSpy).toHaveBeenCalledWith(8);
   });
 
   test("Should load one client on success", async () => {

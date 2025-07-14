@@ -67,9 +67,9 @@ const makeSut = (): SutTypes => {
 describe("DbLoadAllClient Usecase", () => {
   test("Should call LoadAllClientRepository with correct values", async () => {
     const { sut, loadAllClientRepositoryStub } = makeSut();
-    const addSpy = jest.spyOn(loadAllClientRepositoryStub, "loadAll");
+    const loadAllSpy = jest.spyOn(loadAllClientRepositoryStub, "loadAll");
     await sut.load();
-    expect(addSpy).toHaveBeenCalled();
+    expect(loadAllSpy).toHaveBeenCalled();
   });
 
   test("Should load all client on success", async () => {

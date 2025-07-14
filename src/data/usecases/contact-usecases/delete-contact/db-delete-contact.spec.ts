@@ -1,11 +1,4 @@
 import { DbDeleteContact } from "./db-delete-contact";
-import {
-  Contacts,
-  ContactsModel,
-} from "../../../../domain/models/contacts/contact";
-import { LoadContactById } from "../../../../domain/usescase/contact/load-contact/load-contact";
-import { LoadOneContactRepository } from "../../../protocols/db/contact/load-one";
-import { UpdateContact } from "../../../../domain/usescase/contact/update-contact/update-contact";
 import { DeleteContactRepository } from "../../../protocols/db/contact/delete-contact";
 
 interface SutTypes {
@@ -36,15 +29,15 @@ describe("DbDeleteContact Usecase", () => {
 
   test("Should call DeleteContactRepository with correct values", async () => {
     const { sut, deleteContactRepositoryStub } = makeSut();
-    const addSpy = jest.spyOn(deleteContactRepositoryStub, "delete");
+    const deleteSpy = jest.spyOn(deleteContactRepositoryStub, "delete");
     await sut.delete(id);
-    expect(addSpy).toHaveBeenCalledWith(7);
+    expect(deleteSpy).toHaveBeenCalledWith(7);
   });
 
   test("Should delete contact on success", async () => {
     const { sut } = makeSut();
-    const address = await sut.delete(id);
-    expect(address).toEqual("Deletado com Sucesso!");
+    const contact = await sut.delete(id);
+    expect(contact).toEqual("Deletado com Sucesso!");
   });
 
   test("Should throw if DeleteContactRepository throws", async () => {

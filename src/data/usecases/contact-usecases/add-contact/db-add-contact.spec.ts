@@ -56,8 +56,8 @@ describe("DbAddContact Usecase", () => {
 
   test("Should add a contact on success", async () => {
     const { sut } = makeSut();
-    const address = await sut.add(makeAddContact());
-    expect(address).toEqual(makeContact());
+    const contact = await sut.add(makeAddContact());
+    expect(contact).toEqual(makeContact());
   });
 
   test("Should throw if AddContactRepository throws", async () => {

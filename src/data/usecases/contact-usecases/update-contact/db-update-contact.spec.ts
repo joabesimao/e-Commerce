@@ -3,9 +3,6 @@ import {
   Contacts,
   ContactsModel,
 } from "../../../../domain/models/contacts/contact";
-import { LoadContactById } from "../../../../domain/usescase/contact/load-contact/load-contact";
-import { LoadOneContactRepository } from "../../../protocols/db/contact/load-one";
-import { UpdateContact } from "../../../../domain/usescase/contact/update-contact/update-contact";
 import { UpdateContactRepository } from "../../../protocols/db/contact/update-contact";
 
 interface SutTypes {
@@ -49,15 +46,15 @@ describe("DbUpdateContact Usecase", () => {
 
   test("Should call UpdateContactRepository with correct values", async () => {
     const { sut, updateContactRepositoryStub } = makeSut();
-    const addSpy = jest.spyOn(updateContactRepositoryStub, "update");
+    const updateSpy = jest.spyOn(updateContactRepositoryStub, "update");
     await sut.update(id, makeContact());
-    expect(addSpy).toHaveBeenCalledWith(7, makeContact());
+    expect(updateSpy).toHaveBeenCalledWith(7, makeContact());
   });
 
   test("Should update contact on success", async () => {
     const { sut } = makeSut();
-    const address = await sut.update(id, makeContact());
-    expect(address).toEqual(makeContact());
+    const contact = await sut.update(id, makeContact());
+    expect(contact).toEqual(makeContact());
   });
 
   test("Should throw if UpdateContactRepository throws", async () => {

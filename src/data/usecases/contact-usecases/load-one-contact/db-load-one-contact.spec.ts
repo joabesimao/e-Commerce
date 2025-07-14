@@ -1,8 +1,5 @@
 import { DbLoadOneContact } from "./db-load-one-contact";
-import {
-  Contacts,
-  ContactsModel,
-} from "../../../../domain/models/contacts/contact";
+import { Contacts } from "../../../../domain/models/contacts/contact";
 import { LoadContactById } from "../../../../domain/usescase/contact/load-contact/load-contact";
 import { LoadOneContactRepository } from "../../../protocols/db/contact/load-one";
 
@@ -10,12 +7,6 @@ interface SutTypes {
   sut: DbLoadOneContact;
   loadOneContactRepositoryStub: LoadContactById;
 }
-
-const makeContactModel = (): ContactsModel => ({
-  phone: 88447744,
-  phoneSecundary: 44774488,
-  email: "any_email@email.com",
-});
 
 const makeContact = (): Contacts => ({
   id: 1,
@@ -47,15 +38,15 @@ describe("DbLoadOneContact Usecase", () => {
 
   test("Should call LoadOneContactRepository with correct values", async () => {
     const { sut, loadOneContactRepositoryStub } = makeSut();
-    const addSpy = jest.spyOn(loadOneContactRepositoryStub, "loadOne");
+    const loadOneSpy = jest.spyOn(loadOneContactRepositoryStub, "loadOne");
     await sut.loadOne(id);
-    expect(addSpy).toHaveBeenCalledWith(7);
+    expect(loadOneSpy).toHaveBeenCalledWith(7);
   });
 
   test("Should load one contact on success", async () => {
     const { sut } = makeSut();
-    const address = await sut.loadOne(id);
-    expect(address).toEqual(makeContact());
+    const contact = await sut.loadOne(id);
+    expect(contact).toEqual(makeContact());
   });
 
   test("Should throw if LoadAllContactRepository throws", async () => {
