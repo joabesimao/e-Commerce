@@ -1,6 +1,6 @@
 import { Contacts } from "../../../models/contacts/contact";
 
-export interface LoadContact {
+export interface LoadAllContact {
   load(): Promise<Contacts[]>;
 }
 

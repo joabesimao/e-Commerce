@@ -9,6 +9,6 @@ export interface AddAddressModel {
   city: string;
 }
 
-export interface AddClient {
-  add(client: AddAddressModel): Promise<Address>;
+export interface AddAddress {
+  add(address: AddAddressModel): Promise<Address>;
 }

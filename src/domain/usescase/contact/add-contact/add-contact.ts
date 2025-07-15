@@ -7,5 +7,5 @@ export interface AddContactModel {
 }
 
 export interface AddContact {
-  add(client: AddContactModel): Promise<Contacts>;
+  add(contact: AddContactModel): Promise<Contacts>;
 }

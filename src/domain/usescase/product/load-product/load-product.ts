@@ -1,6 +1,6 @@
 import { Product } from "../../../models/product/product";
 
-export interface LoadProduct {
+export interface LoadAllProduct {
   load(): Promise<Product[]>;
 }
 
