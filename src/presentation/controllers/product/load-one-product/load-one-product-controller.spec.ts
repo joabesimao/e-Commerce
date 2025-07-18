@@ -22,13 +22,6 @@ const makeFakeProduct = (): Product => ({
   price: 10,
 });
 
-const makeFakeProductModel = (): ProductModel => ({
-  name: "any_name",
-  category: "any_category",
-  description: "any_description",
-  price: 10,
-});
-
 interface SutTypes {
   sut: LoadOneProductController;
   loadOneProductStub: LoadProductById;
