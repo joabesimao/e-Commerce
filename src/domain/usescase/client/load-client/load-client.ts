@@ -1,6 +1,6 @@
 import { Client } from "../../../models/client/client";
 
-export interface LoadClient {
+export interface LoadAllClient {
   load(): Promise<Client[]>;
 }
 
