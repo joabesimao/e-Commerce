@@ -21,8 +21,8 @@ const makeFakeClientModel = (): ClientModel => ({
   },
   contact: {
     email: "any_email@email.com",
-    phone: 858745558,
-    phoneSecundary: 858745589,
+    phone: "858745558",
+    phoneSecundary: "858745589",
   },
 });
 
@@ -40,8 +40,8 @@ const makeFakeClient = (): Client => ({
   },
   contact: {
     email: "any_email@email.com",
-    phone: 858745558,
-    phoneSecundary: 858745589,
+    phone: "858745558",
+    phoneSecundary: "858745589",
   },
 });
 

@@ -11,15 +11,15 @@ interface SutTypes {
 }
 
 const makeContactModel = (): ContactsModel => ({
-  phone: 88447744,
-  phoneSecundary: 44774488,
+  phone: "88447744",
+  phoneSecundary: "44774488",
   email: "any_email@email.com",
 });
 
 const makeContact = (): Contacts => ({
   id: 1,
-  phone: 88447744,
-  phoneSecundary: 44774488,
+  phone: "88447744",
+  phoneSecundary: "44774488",
   email: "email@email.com",
 });
 
