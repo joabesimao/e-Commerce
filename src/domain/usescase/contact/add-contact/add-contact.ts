@@ -1,8 +1,8 @@
 import { Contacts } from "../../../models/contacts/contact";
 
 export interface AddContactModel {
-  phone: number;
-  phoneSecundary: number;
+  phone: string;
+  phoneSecundary: string;
   email: string;
 }
 
