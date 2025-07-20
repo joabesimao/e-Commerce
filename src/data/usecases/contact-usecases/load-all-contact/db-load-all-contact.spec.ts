@@ -10,20 +10,20 @@ interface SutTypes {
 const makeContactList = (): Contacts[] => [
   {
     id: 1,
-    phone: 88447744,
-    phoneSecundary: 44774488,
+    phone: "88447744",
+    phoneSecundary: "44774488",
     email: "email@email.com",
   },
   {
     id: 2,
-    phone: 88447743,
-    phoneSecundary: 44774487,
+    phone: "88447743",
+    phoneSecundary: "44774487",
     email: "any_email@email.com",
   },
   {
     id: 3,
-    phone: 88447741,
-    phoneSecundary: 44774481,
+    phone: "88447741",
+    phoneSecundary: "44774481",
     email: "other_email@email.com",
   },
 ];
