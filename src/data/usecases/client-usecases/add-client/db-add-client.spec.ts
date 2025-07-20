@@ -21,8 +21,8 @@ const makeAddClient = (): AddClientModel => ({
   },
   contact: {
     email: "any_email",
-    phone: 55555555,
-    phoneSecundary: 6666666,
+    phone: "55555555",
+    phoneSecundary: "6666666",
   },
 });
 
@@ -40,8 +40,8 @@ const makeClient = (): Client => ({
   },
   contact: {
     email: "any_email",
-    phone: 55555555,
-    phoneSecundary: 6666666,
+    phone: "55555555",
+    phoneSecundary: "6666666",
   },
 });
 
@@ -82,8 +82,8 @@ describe("DbAddClient Usecase", () => {
       },
       contact: {
         email: "any_email",
-        phone: 55555555,
-        phoneSecundary: 6666666,
+        phone: "55555555",
+        phoneSecundary: "6666666",
       },
     });
   });

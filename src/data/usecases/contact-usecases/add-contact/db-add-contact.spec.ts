@@ -12,15 +12,15 @@ interface SutTypes {
 }
 
 const makeAddContact = (): ContactsModel => ({
-  phone: 88447744,
-  phoneSecundary: 44774488,
+  phone: "88447744",
+  phoneSecundary: "44774488",
   email: "any_email@email.com",
 });
 
 const makeContact = (): Contacts => ({
   id: 1,
-  phone: 88447744,
-  phoneSecundary: 44774488,
+  phone: "88447744",
+  phoneSecundary: "44774488",
   email: "any_email@email.com",
 });
 
@@ -48,8 +48,8 @@ describe("DbAddContact Usecase", () => {
     const addSpy = jest.spyOn(addContactRepositoryStub, "add");
     await sut.add(makeAddContact());
     expect(addSpy).toHaveBeenCalledWith({
-      phone: 88447744,
-      phoneSecundary: 44774488,
+      phone: "88447744",
+      phoneSecundary: "44774488",
       email: "any_email@email.com",
     });
   });
