@@ -1,6 +1,6 @@
 import { Address } from "../../../models/address/address";
 
-export interface LoadAddress {
+export interface LoadAllAddress {
   load(): Promise<Address[]>;
 }
 
