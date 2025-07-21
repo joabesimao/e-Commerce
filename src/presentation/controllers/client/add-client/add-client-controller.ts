@@ -7,10 +7,10 @@ import { Controller } from "../../../protocols/controller/controller";
 import { HttpRequest, HttpResponse } from "../../../protocols/http/http";
 
 export class AddClientController implements Controller {
-  constructor(private readonly AddClient: AddClient) {}
+  constructor(private readonly addClient: AddClient) {}
   async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
-      const addNewClient = await this.AddClient.add(httpRequest.body);
+      const addNewClient = await this.addClient.add(httpRequest.body);
       return ok(addNewClient);
     } catch (error) {
       return serverError(error);
