@@ -1,12 +1,12 @@
 export interface ContactsModel {
-  phone: number;
-  phoneSecundary: number;
+  phone: string;
+  phoneSecundary: string;
   email: string;
 }
 
 export interface Contacts {
   id: number;
-  phone: number;
-  phoneSecundary: number;
+  phone: string;
+  phoneSecundary: string;
   email: string;
 }

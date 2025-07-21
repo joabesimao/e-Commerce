@@ -10,8 +10,8 @@ interface SutTypes {
 
 const makeContact = (): Contacts => ({
   id: 1,
-  phone: 88447744,
-  phoneSecundary: 44774488,
+  phone: "88447744",
+  phoneSecundary: "44774488",
   email: "email@email.com",
 });
 

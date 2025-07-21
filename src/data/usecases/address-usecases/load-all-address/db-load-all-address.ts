@@ -1,8 +1,8 @@
 import { Address } from "../../../../domain/models/address/address";
-import { LoadAddress } from "../../../../domain/usescase/address/load-address/load-address";
+import { LoadAllAddress } from "../../../../domain/usescase/address/load-address/load-address";
 import { LoadAllAddressRepository } from "../../../protocols/db/address/load-all-address";
 
-export class DbLoadAllAddress implements LoadAddress {
+export class DbLoadAllAddress implements LoadAllAddress {
   constructor(
     private readonly loadAllAddressRepository: LoadAllAddressRepository
   ) {}
