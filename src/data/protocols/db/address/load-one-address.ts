@@ -1,5 +1,5 @@
 import { Address } from "../../../../domain/models/address/address";
 
 export interface LoadOneAddressRepository {
-  loadOne(): Promise<Address>;
+  loadOne(id: number): Promise<Address>;
 }
