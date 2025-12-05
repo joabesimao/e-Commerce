@@ -62,6 +62,6 @@ export class ContactRepository
         id: Number(id),
       },
     });
-    return "Deletado com Sucesso!";
+    return "Successfully Deleted!";
   }
 }
