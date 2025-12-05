@@ -69,6 +69,6 @@ export class AddressRepository
         id: Number(id),
       },
     });
-    return "Deletado com Sucesso!";
+    return "Successfully Deleted!";
   }
 }

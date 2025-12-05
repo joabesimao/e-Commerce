@@ -63,6 +63,6 @@ export class ProductRepository
         id: Number(id),
       },
     });
-    return "Deletado com Sucesso!";
+    return "Successfully Deleted!";
   }
 }

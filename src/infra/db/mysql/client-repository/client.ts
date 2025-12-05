@@ -59,6 +59,6 @@ export class ClientRepository
         id: Number(id),
       },
     });
-    return "Deletado com Sucesso!";
+    return "Successfully Deleted!";
   }
 }
