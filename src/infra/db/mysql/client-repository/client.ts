@@ -5,7 +5,7 @@ import { LoadOneClientRepository } from "../../../../data/protocols/db/client/lo
 import { UpdateClientRepository } from "../../../../data/protocols/db/client/update-client";
 import { Client } from "../../../../domain/models/client/client";
 import { AddClientModel } from "../../../../domain/usescase/client/add-client/add-client";
-import { prisma } from "../helper/index";
+import { prisma } from "../../../../config/prisma";
 
 export class ClientRepository
   implements

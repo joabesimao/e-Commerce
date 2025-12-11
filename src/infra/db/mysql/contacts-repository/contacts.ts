@@ -5,7 +5,7 @@ import { LoadOneContactRepository } from "../../../../data/protocols/db/contact/
 import { UpdateContactRepository } from "../../../../data/protocols/db/contact/update-contact";
 import { Contacts } from "../../../../domain/models/contacts/contact";
 import { AddContactModel } from "../../../../domain/usescase/contact/add-contact/add-contact";
-import { prisma } from "../helper/index";
+import { prisma } from "../../../../config/prisma";
 
 export class ContactRepository
   implements
