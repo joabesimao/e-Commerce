@@ -5,7 +5,7 @@ import { LoadOneAddressRepository } from "../../../../data/protocols/db/address/
 import { UpdateAddressRepository } from "../../../../data/protocols/db/address/update-address";
 import { Address } from "../../../../domain/models/address/address";
 import { AddAddressModel } from "../../../../domain/usescase/address/add-address/add-address";
-import { prisma } from "../helper/index";
+import { prisma } from "../../../../config/prisma";
 
 export class AddressRepository
   implements

@@ -5,7 +5,7 @@ import { LoadOneProductRepository } from "../../../../data/protocols/db/product/
 import { UpdateProductRepository } from "../../../../data/protocols/db/product/update-product";
 import { Product } from "../../../../domain/models/product/product";
 import { AddProductModel } from "../../../../domain/usescase/product/add-product/add-product";
-import { prisma } from "../helper/index";
+import { prisma } from "../../../../config/prisma";
 
 export class ProductRepository
   implements
