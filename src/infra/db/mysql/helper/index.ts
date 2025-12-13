@@ -1,6 +1,6 @@
 import env from "../../../../config/env";
 import { createPool } from "mysql2/promise";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "../../../../generated/prisma/client";
 
 export let prisma = new PrismaClient();
 
